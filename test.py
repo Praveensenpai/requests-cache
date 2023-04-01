@@ -1,4 +1,4 @@
-from request_cache import cache_request
+from cache_request import cache_request
 
 url = "https://api.ipify.org/?format=json"
 params = None
