@@ -6,15 +6,13 @@ This is a Python module that demonstrates how to implement request caching using
 
 The `requests-cache` and `rich` package can be installed using pip:
 
-Copy code
-
 `pip install requests-cache rich`
 
 ### Usage
 
 This module contains a function `cache_request` that sends a GET request to a specified URL using a cached session. Here's how to use it:
 
-pythonCopy code
+python
 
 `from cache_request import cache_request  url = "https://api.ipify.org/?format=json" params = None headers = None  response = cache_request(url, params=params, headers=headers)  print(response.json())`
 
@@ -26,6 +24,6 @@ The cached session is initialized with an expiration time of 24 hours, which can
 
 The `cache_request` function prints some information about the response, including the request URL, whether the response was returned from the cache, when the response was created, when it will expire, and whether it has already expired.
 
-pythonCopy code
+python
 
 `URL: https://api.ipify.org/?format=json Response cache status: False Response created at: 2023-04-01T12:00:00.000000Z Response expiration time: 2023-04-02T12:00:00.000000Z Is response expired? False`
