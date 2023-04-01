@@ -7,4 +7,4 @@ headers = None
 
 response = cache_request(url, params=params, headers=headers)
 
-print(response.text)
+print(response.json())
