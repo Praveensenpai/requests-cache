@@ -10,10 +10,12 @@ def cache_request(url: str, params=None, **kwargs) -> AnyResponse:
     """
     Send a GET request to the specified URL using a cached session.
     """
-    with session.get(url, params=params, **kwargs) as response:
-        print(f"URL: {response.url}")
-        print(f"Response cache status: {response.from_cache}")
-        print(f"Response created at: {response.created_at}")
-        print(f"Response expiration time: {response.expires}")
-        print(f"Is response expired? {response.is_expired}")
-        return response
+    response = session.get(url, params=params, **kwargs)
+    print("\n______________________________________________")
+    print(f"URL: {response.url}")
+    print(f"Response cache status: {response.from_cache}")
+    print(f"Response created at: {response.created_at}")
+    print(f"Response expiration time: {response.expires}")
+    print(f"Is response expired? {response.is_expired}")
+    print("______________________________________________\n")
+    return response
